@@ -82,8 +82,8 @@ export const CheckoutButton = styled.button`
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
-  background-color: ${props => props.disabled ? 'grey' : 'navy'};
-  color: ${props => props.disabled ? 'lightgrey' : 'white'};
+  background-color: ${props => props.disabled ? "grey" : "navy"};
+  color: ${props => props.disabled ? "lightgrey" : "white"};
   font-size: 1rem;
-  cursor: ${props => props.disabled ? 'default' : 'pointer'};
+  cursor: ${props => props.disabled ? "default" : "pointer"};
 `;

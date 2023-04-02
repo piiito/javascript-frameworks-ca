@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import useAPI from "../useAPI";
 import * as Style from "./home.styled";
@@ -10,7 +10,7 @@ const API_URL = "https://api.noroff.dev/api/v1/online-shop"
 function SearchProducts () { 
     
     const { data } = useAPI(API_URL);
-    const [searchInput, setSearchInput] = useState('');
+    const [searchInput, setSearchInput] = useState("");
     const [filteredProducts, setFilteredProducts] = useState([]);
     
     function onSearchProductsInputChange(searchValue) {
@@ -54,7 +54,7 @@ function SearchProducts () {
                                 )
                                 }
                                 <button className={styles.button}>
-                                <Link to={'/product/'+item.id} className={styles.link}>View Product</Link>
+                                <Link to={"/product/"+item.id} className={styles.link}>View Product</Link>
                                 </button>
                             </div>
                             </div>

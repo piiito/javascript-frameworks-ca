@@ -1,11 +1,11 @@
-import React  from 'react';
-import { Routes, Route, Link, Outlet } from 'react-router-dom';
-import styled from 'styled-components';
-import ContactPage from './components/pages/contact';
-import HomePage from './components/pages/home';
-import CheckoutPage from './components/pages/checkout';
-import ProductPage from './components/pages/product';
-import CheckoutSuccessPage from './components/pages/checkoutsuccess';
+import React  from "react";
+import { Routes, Route, Link, Outlet } from "react-router-dom";
+import styled from "styled-components";
+import ContactPage from "./components/pages/contact";
+import HomePage from "./components/pages/home";
+import CheckoutPage from "./components/pages/checkout";
+import ProductPage from "./components/pages/product";
+import CheckoutSuccessPage from "./components/pages/checkoutsuccess";
 import CartIcon from "./components/images/shopping-cart.png";
 import styles from "./components/styles/cart.module.css"
 
