@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React  from 'react';
 import { Routes, Route, Link, Outlet } from 'react-router-dom';
-import { useCart } from './components/useCart';
 import styled from 'styled-components';
 import ContactPage from './components/pages/contact';
 import HomePage from './components/pages/home';
@@ -37,7 +36,6 @@ function Contact() {
 
 
 function Nav() {
-  const { cart, products, removeFromCart} = useCart();
   return (
     <StyleNav>
       <NavList>
@@ -49,7 +47,7 @@ function Nav() {
         </NavItem>
         <NavItem className={styles.navLink}>
           <NavLink to="/checkout"><div className={styles.cartAmount}id="cartAmount"></div>
-            <img  src={CartIcon} />
+            <img  src={CartIcon} alt ="cart"/>
           </NavLink>
         </NavItem>
       </NavList>

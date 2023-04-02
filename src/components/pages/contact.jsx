@@ -2,7 +2,6 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { Link, redirect } from 'react-router-dom';
 import * as Style from './contact.styled';
 
 

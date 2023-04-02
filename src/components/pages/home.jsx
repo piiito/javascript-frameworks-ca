@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import useAPI from "../useAPI";
-import { create } from 'zustand';
 import * as Style from "./home.styled";
 import styles from "../styles/productcard.css"
 
@@ -65,7 +64,7 @@ function SearchProducts () {
 
 
 export default function HomePage() {
-    const { data, isLoading, isError } = useAPI(API_URL, );
+    const { data } = useAPI(API_URL, );
     
       return (
           <div>
