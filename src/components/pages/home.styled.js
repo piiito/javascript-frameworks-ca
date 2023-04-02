@@ -14,6 +14,11 @@ export const HomepageHeading = styled.h1`
 text-align: center
 `;
 
+export const SearchProductsWrapper= styled.div`
+text-align: center;
+
+`;
+
 export const ProductHeading = styled.h2`
   font-size: 18px;
   margin: 20 0px;
@@ -22,9 +27,6 @@ export const ProductHeading = styled.h2`
   
 `;
 
-export const Input = styled.input`
-margin: auto;
-`
 
 export const ProductCard = styled.div`
     display: flex;

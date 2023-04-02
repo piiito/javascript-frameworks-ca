@@ -1,9 +1,8 @@
-
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import useAPI from "../useAPI";
 import * as Style from "./home.styled";
-import styles from "../styles/productcard.css"
+import styles from "../styles/productcard.module.css";
 
 const API_URL = "https://api.noroff.dev/api/v1/online-shop"
 
@@ -33,27 +32,37 @@ function SearchProducts () {
     <div>
         <input className={styles.input} onChange={onInputChange} value={searchInput} placeholder="Search for products"/>
         {searchInput !== `` ? 
-        <ul> 
+        <div> 
             {filteredProducts.map((item) => (
-                <li key={item.id}>
-                    <Link to={'/product/'+item.id}>
-                        <Style.ProductContainer>
-                            <Style.ProductHeading>{item.title}</Style.ProductHeading>
-                            <Style.ImageContainer>
-                                <Style.ProductImage src={item.imageUrl} alt={item.description} />
-                            </Style.ImageContainer>
-                            <div>   
-                            <Style.PriceContainer>{ 
-                                item.discountedPrice === item.price ? item.discountedPrice+",-"
-                                : <Style.DiscountedPrice>{item.discountedPrice},- <Style.Discount>{((data.price - data.discountedPrice) / data.price * 100).toFixed(0)}% OFF</Style.Discount></Style.DiscountedPrice>
-                                }
-                            </Style.PriceContainer>
+             <div className={styles.cardwrapper}>
+                    <div className={styles.card}>
+                        <div className={styles.item} key={item.id}>
+                            <div className={styles.image}>
+                            <img className={styles.img} src={item.imageUrl} alt={item.description} />
                             </div>
-                        </Style.ProductContainer>
-                    </Link>
-                </li>
+                            <div className={styles.details}>
+                            <h2 className={styles.title}>{item.title}</h2>
+                            <div className={styles.price}>
+                                { item.discountedPrice === item.price 
+                                ? <span className={styles.price}>{item.discountedPrice},-</span> 
+                                : (
+                                    <div className={styles.wrapper}>
+                                    <span className={styles.price}>{item.discountedPrice},-</span>
+                                    <span className={styles.discount}>{((item.price - item.discountedPrice) / item.price * 100).toFixed(0)}% OFF</span>
+                                    <span className={styles.originalprice}>{item.price},-</span>
+                                    </div>
+                                )
+                                }
+                                <button className={styles.button}>
+                                <Link to={'/product/'+item.id} className={styles.link}>View Product</Link>
+                                </button>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                </div>
             ))}
-        </ul>
+        </div>
         : ``}
     </div>
     );
@@ -69,11 +78,11 @@ export default function HomePage() {
       return (
           <div>
             <Style.HomepageHeading>
-              Homepage
+              Products
             </Style.HomepageHeading>
-            <div>
+            <Style.SearchProductsWrapper>
               <SearchProducts />
-            </div>
+            </Style.SearchProductsWrapper>
             <Style.ProductContainer>
                     {data.map((data) => (
                     <Link key={data.id} to={`/product/${data.id}`}>
