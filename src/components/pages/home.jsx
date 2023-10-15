@@ -85,7 +85,7 @@ export default function HomePage() {
             </Style.SearchProductsWrapper>
             <Style.ProductContainer>
                     {data.map((data) => (
-                    <Link key={data.id} to={`/product/${data.id}`}>
+                    <Link id="card-a" key={data.id} to={`/product/${data.id}`}>
                     <Style.ProductHeading>{data.title}</Style.ProductHeading>
                     <Style.ImageContainer>
                         <Style.ProductImage src={data.imageUrl} alt={data.description} />
