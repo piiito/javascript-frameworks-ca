@@ -53,8 +53,9 @@ export const ProductImage = styled.img`
 
 export const PriceContainer = styled.div`
   font-size: 1.2rem;
-  paddiing: 20px 0 ;
+  padding: 20px 0px 5px;
   text-align: center;
+  color: red;
 `;
 
 export const DiscountedPrice = styled.span`
