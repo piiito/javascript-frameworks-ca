@@ -1,6 +1,7 @@
 #  JavaScript Frameworks CA 
 
-![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
+![e-commerce](https://github.com/piiito/javascript-frameworks-ca/assets/91608038/176e1050-fb48-40b4-ad03-b6f605d8326c)
+
 
 This is a website for an e-commerce store.
 
